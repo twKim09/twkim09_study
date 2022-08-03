@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <script defer src="/static/index.js" type="application/javascript"></script>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+    </head>
+
+<body>
+    <h2>Ajax test</h2>
+    <hr size='2' color = 'black' width="500px" align="left">
+
+    
+    name : <input type="text" id = 'name'><br>
+    password : <input type="text" id = 'password'><button id = "dbinput"> DB save</button><br>
+    <br>
+
+    <div id = "showData" style="border:1px solid; padding:10px; width:300px;"> 1st server Data </div>
+    <button id = "btnOK" > 1st server data </button>
+
+
+    <hr size='2' color = 'black' width="500px" align="left">
+    Type Kafka Message <br><input type = "text" id="kafka-prod"  style="width:300px; height:70px;">
+    <button id = "btnProd">kafka Issue</button><br><br>
+    Kafka Issue Response
+    <div id="ProdReturn" style="border:1px solid; padding:10px; width:300px; height:300px;" ></div>
+    <br>
+    Kafka Message<br>
+    <div id="kafka-consumer" style="border:1px solid; padding:10px; width:300px; height:70px;"></div><button id = "kafka-consumer-btn"> Show Message </button><br>
+
+
+    <div id = "showData2" style="border:1px solid; padding:10px; width:300px;"> 2nd server Data </div>
+    <button id = "getdata" > 2nd server data </button>
+
+    <button onclick="javascript:btn()">button</button>
+
+</body>
+
+</html>
